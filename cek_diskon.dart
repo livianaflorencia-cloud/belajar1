@@ -66,40 +66,95 @@ void main(){
 
   // Soal hitung tiket bioskop
 
+  // var jalan = true;
+  // var daftartiket = ['Reguler', 'Premiere', 'VIP'];
+
+  // while(jalan == true){
+  //   print('===============================');
+  //   print('       Bioskop Serba Ada       ');
+  //   print('===============================');
+  //   print('1. Reguler : Rp. 35.000');
+  //   print('2. Premiere : Rp. 60.000');
+  //   print('3. VIP : Rp. 100.000');
+  //   print('4. Selesai');
+  //   print('===============================');
+  //   stdout.write('Pilih Tiket(1,2,3,4):');
+  //   var inputUser = stdin.readLineSync();
+
+  //   var pilihan = int.tryParse(inputUser ?? '') ?? 0;
+
+  //   switch(pilihan){
+  //     case 1:
+  //     print('Anda memilih tiket reguler');
+  //     print('Total yang harus dibayar : Rp. 35.000');
+  //     break;
+  //     case 2:
+  //     print('Anda memilih tiket premiere');
+  //     print('Total yang harus dibayar : Rp. 60.000');
+  //     break;
+  //     case 3:
+  //     print('Anda memilih tiket VIP');
+  //     print('Total yang harus dibayar : Rp. 100.000');
+  //     break;
+  //     case 4:
+  //     print('Terimakasih sudah memesan tiket');
+  //     jalan = false; // berhenti mengulang menu
+  //     break;
+  //   }
+  // }
+
+  // soal Sistem kasir minimarket
+
   var jalan = true;
-  var daftartiket = ['Reguler', 'Premiere', 'VIP'];
+  var barang =['Ciki', 'Minuman', 'Roti'];
 
   while(jalan == true){
-    print('===============================');
-    print('       Bioskop Serba Ada       ');
-    print('===============================');
-    print('1. Reguler : Rp. 35.000');
-    print('2. Premiere : Rp. 60.000');
-    print('3. VIP : Rp. 100.000');
-    print('4. Selesai');
-    print('===============================');
-    stdout.write('Pilih Tiket(1,2,3,4):');
+    print('================================');
+    print('      Minimarket Serba Ada      ');
+    print('================================');
+    print('1. Ciki : Rp. 5.000');
+    print('2. Minuman : Rp. 7.000');
+    print('3. Roti : Rp. 10.000');
+    print('4. Keluar');
+    print('================================');
+    stdout.write('Pilih Barang(1,2,3,4):');
     var inputUser = stdin.readLineSync();
 
     var pilihan = int.tryParse(inputUser ?? '') ?? 0;
 
     switch(pilihan){
       case 1:
-      print('Anda memilih tiket reguler');
-      print('Total yang harus dibayar : Rp. 35.000');
+      print('Anda memilih Ciki');
+      stdout.write('Berapa jumlah yang dibeli ? :');
+      var inputjumlah = stdin.readLineSync();
+      var jumlah = int.tryParse(inputjumlah ?? '') ?? 0;
+      var total = 5000 * jumlah;
+      print('Total yang harus dibayar : Rp. $total');
       break;
       case 2:
-      print('Anda memilih tiket premiere');
-      print('Total yang harus dibayar : Rp. 60.000');
+      print('Anda memilih Minuman');
+      stdout.write('Berapa jumlah yang dibeli ? :');
+      var inputjumlah = stdin.readLineSync();
+      var jumlah = int.tryParse(inputjumlah ?? '') ?? 0;
+      var total = 7000 * jumlah;
+      print('Total yang harus dibayar : Rp. $total');
       break;
       case 3:
-      print('Anda memilih tiket VIP');
-      print('Total yang harus dibayar : Rp. 100.000');
+      print('Anda memilih Roti');
+      stdout.write('Berapa jumlah yang dibeli ? :');
+      var inputjumlah = stdin.readLineSync();
+      var jumlah = int.tryParse(inputjumlah ?? '') ?? 0;
+      var total = 10000 * jumlah;
+      print('Total yang harus dibayar : Rp. $total');
       break;
       case 4:
-      print('Terimakasih sudah memesan tiket');
-      jalan = false; // berhenti mengulang menu
+      print('Terimakasih sudah berbelanja');
+      jalan = false;
       break;
+      default:
+      print('Barang yang anda pilih tidak tersedia');
+
     }
+
   }
 }
